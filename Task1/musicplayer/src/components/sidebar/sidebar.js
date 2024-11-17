@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SidebarButton from './sidebarButton';
 import { MdFavorite } from 'react-icons/md';
 import { FaGripfire, FaPlay } from 'react-icons/fa';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { IoLibrary } from 'react-icons/io5';
 import { MdSpaceDashboard } from 'react-icons/md';
+import apiClient from '../../spotify';
 
 const Sidebar = () => {
+
+    const [image, setImage] = useState("https://i.pinimg.com/736x/d7/77/84/d77784d81ef5a601071fd803d8938307.jpg")
+    useEffect(() => { 
+     apiClient.get("me").then(response => {console.log(response);
+        setImage(response.data.images[0].url);
+     })
+    }, [])
+    
     return (
         <div className="h-[100%] p-5 flex flex-col items-center justify-between">
             <img 
-            src="https://i.pinimg.com/736x/d7/77/84/d77784d81ef5a601071fd803d8938307.jpg"
+            src={image}
             alt='profile' 
             className='w-24 h-24 rounded-full'/>
             {/* <div className="p-4">
