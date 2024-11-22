@@ -20,7 +20,11 @@ const Sidebar = () => {
       <div className="text-xl font-semibold">Other Menu</div>
       <ul className="space-y-4">
         <li className="text-gray-600">Settings</li>
-        <li className="text-gray-600 text-red-500">Log Out</li>
+        <li className="text-gray-600 text-red-500">
+          <button>
+          Log Out
+          </button>
+          </li>
       </ul>
     </div>
   );
