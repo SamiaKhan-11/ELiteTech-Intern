@@ -39,7 +39,7 @@ const Home = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-10">
       <Header />
       <SearchBar onSearch={fetchRecipes} onClear={clearResults} />
       {loading && <p className="text-center text-blue-500">Loading...</p>}

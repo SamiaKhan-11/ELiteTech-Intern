@@ -12,7 +12,7 @@ const RecipeCard = ({ recipe }) => {
       />
       <h3 className="mt-2 text-lg font-bold">{recipe.title}</h3>
       <a
-        href={`/recipe/${recipe.id}`}
+        href={`/recipe-detail/${recipe.id}`}
         className="mt-4 block bg-blue-500 text-white text-center py-2 rounded"
       >
         View Details
